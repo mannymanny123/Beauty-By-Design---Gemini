@@ -5,92 +5,110 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beauty By Design | Luxury African Braiding</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <nav>
         <div class="logo">BEAUTY BY DESIGN</div>
         <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
             <li><a href="#gallery">Styles</a></li>
-            <li><a href="#booking">Book Now</a></li>
+            <li><a href="#prices">Pricing</a></li>
+            <li><a href="#booking" class="nav-btn">Book Now</a></li>
         </ul>
     </nav>
 
-    <header id="home" class="hero">
-        <div class="hero-content">
-            <h1>Artistry in Every Braid</h1>
-            <p>Premium African Hair Styling & Beauty Services</p>
-            <a href="#booking" class="btn">Schedule Appointment</a>
+    <header class="hero">
+        <div class="hero-card">
+            <span class="subtitle">Welcome to Luxury</span>
+            <h1>Artisan Braids & Protective Styles</h1>
+            <p>Tailored beauty for the modern African woman. Quality, comfort, and culture combined.</p>
+            <a href="#booking" class="btn">Secure Your Appointment</a>
         </div>
     </header>
 
     <section id="gallery" class="section">
-        <h2 class="section-title">Our Signature Styles</h2>
+        <h2 class="section-title">Signature Styles</h2>
         <div class="gallery-grid">
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1649129562479-052402120015?q=80&w=600" alt="Knotless Braids">
-                <div class="card-info">
-                    <h3>Knotless Braids</h3>
-                    <p class="price">From $150</p>
-                </div>
+                <img src="https://images.unsplash.com/photo-1620331311520-246422fd82f9?q=80&w=600" alt="African woman with Braids">
+                <div class="card-info"><h3>Fulani Tribal</h3><p>$120+</p></div>
             </div>
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1605972175231-189679264426?q=80&w=600" alt="Stitch Cornrows">
-                <div class="card-info">
-                    <h3>Stitch Cornrows</h3>
-                    <p class="price">From $85</p>
-                </div>
+                <img src="https://images.unsplash.com/photo-1632760821731-29e5e7869681?q=80&w=600" alt="Knotless Braids">
+                <div class="card-info"><h3>Large Knotless</h3><p>$160+</p></div>
             </div>
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1582095133179-bfd08e2fc6b3?q=80&w=600" alt="Boho Locs">
-                <div class="card-info">
-                    <h3>Boho Locs</h3>
-                    <p class="price">From $200</p>
-                </div>
+                <img src="https://images.unsplash.com/photo-1589710751893-f9a6770ad71b?q=80&w=600" alt="Cornrow Braids">
+                <div class="card-info"><h3>Designer Cornrows</h3><p>$85+</p></div>
             </div>
         </div>
     </section>
 
-    <section id="booking" class="section booking-container">
-        <h2 class="section-title">Reserve Your Session</h2>
-        <form id="bookingForm" action="thank-you.html" method="POST" data-netlify="true">
-            <div class="form-group">
-                <label>Full Name</label>
-                <input type="text" name="name" required placeholder="Enter your name">
+    <section id="prices" class="section dark-bg">
+        <h2 class="section-title">Service Menu</h2>
+        <div class="price-container">
+            <div class="price-row"><span>Small Knotless (Mid-back)</span><span>$200</span></div>
+            <div class="price-row"><span>Smedium Knotless (Waist)</span><span>$250</span></div>
+            <div class="price-row"><span>Bohemian Curls (Add-on)</span><span>+$40</span></div>
+            <div class="price-row"><span>Stitch Braids (6-8)</span><span>$100</span></div>
+            <div class="price-row"><span>Wash & Blowdry</span><span>$35</span></div>
+        </div>
+    </section>
+
+    <section id="booking" class="section booking-area">
+        <div class="booking-grid">
+            <div class="booking-info">
+                <h2>Ready to Book?</h2>
+                <p>Please note: A non-refundable deposit is required to secure your slot. Ensure your hair is washed and detangled unless a wash service is added.</p>
+                <ul class="policy-list">
+                    <li>✓ Mobile service available</li>
+                    <li>✓ 15-minute grace period</li>
+                    <li>✓ Hair included in all prices</li>
+                </ul>
             </div>
-            <div class="form-group">
-                <label>Email Address</label>
-                <input type="email" name="email" required placeholder="email@example.com">
-            </div>
-            <div class="form-group">
-                <label>Select Service</label>
-                <select name="service" id="service" required>
-                    <option value="">-- Choose a Style --</option>
-                    <option value="knotless">Knotless Braids ($150+)</option>
-                    <option value="stitch">Stitch Cornrows ($85+)</option>
-                    <option value="boho">Boho Locs ($200+)</option>
-                    <option value="custom">Custom Design</option>
-                </select>
-            </div>
-            <div class="form-row">
+
+            <form name="BookingForm" method="POST" data-netlify="true" action="/thank-you.html" class="booking-form">
+                <input type="hidden" name="form-name" value="BookingForm" />
+                
                 <div class="form-group">
-                    <label>Date</label>
-                    <input type="date" name="date" id="datePicker" required>
+                    <label>Full Name</label>
+                    <input type="text" name="name" placeholder="Yara Shahidi" required>
                 </div>
+                
                 <div class="form-group">
-                    <label>Time (1hr slots)</label>
-                    <select name="time" id="timeSlot" required>
-                        </select>
+                    <label>Service Selection</label>
+                    <select name="service" required>
+                        <option value="knotless">Knotless Braids</option>
+                        <option value="stitch">Stitch Braids</option>
+                        <option value="locs">Soft Locs</option>
+                        <option value="wash">Wash & Style</option>
+                    </select>
                 </div>
-            </div>
-            <button type="submit" class="btn btn-full">Confirm Booking</button>
-        </form>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Preferred Date</label>
+                        <input type="date" name="date" id="datePicker" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Time Slot</label>
+                        <select name="time" id="timeSlot" required></select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Additional Notes (Hair color, length, etc.)</label>
+                    <textarea name="message" rows="3"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-full">Submit Booking Request</button>
+            </form>
+        </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 Beauty By Design. All Rights Reserved.</p>
+        <p>Beauty By Design &copy; 2026. Made for Elegance.</p>
     </footer>
 
     <script src="script.js"></script>
