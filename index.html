@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beauty By Design | Luxury African Braiding</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">BEAUTY BY DESIGN</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#gallery">Styles</a></li>
+            <li><a href="#booking">Book Now</a></li>
+        </ul>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="hero-content">
+            <h1>Artistry in Every Braid</h1>
+            <p>Premium African Hair Styling & Beauty Services</p>
+            <a href="#booking" class="btn">Schedule Appointment</a>
+        </div>
+    </header>
+
+    <section id="gallery" class="section">
+        <h2 class="section-title">Our Signature Styles</h2>
+        <div class="gallery-grid">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1649129562479-052402120015?q=80&w=600" alt="Knotless Braids">
+                <div class="card-info">
+                    <h3>Knotless Braids</h3>
+                    <p class="price">From $150</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1605972175231-189679264426?q=80&w=600" alt="Stitch Cornrows">
+                <div class="card-info">
+                    <h3>Stitch Cornrows</h3>
+                    <p class="price">From $85</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1582095133179-bfd08e2fc6b3?q=80&w=600" alt="Boho Locs">
+                <div class="card-info">
+                    <h3>Boho Locs</h3>
+                    <p class="price">From $200</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="booking" class="section booking-container">
+        <h2 class="section-title">Reserve Your Session</h2>
+        <form id="bookingForm" action="thank-you.html" method="POST" data-netlify="true">
+            <div class="form-group">
+                <label>Full Name</label>
+                <input type="text" name="name" required placeholder="Enter your name">
+            </div>
+            <div class="form-group">
+                <label>Email Address</label>
+                <input type="email" name="email" required placeholder="email@example.com">
+            </div>
+            <div class="form-group">
+                <label>Select Service</label>
+                <select name="service" id="service" required>
+                    <option value="">-- Choose a Style --</option>
+                    <option value="knotless">Knotless Braids ($150+)</option>
+                    <option value="stitch">Stitch Cornrows ($85+)</option>
+                    <option value="boho">Boho Locs ($200+)</option>
+                    <option value="custom">Custom Design</option>
+                </select>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Date</label>
+                    <input type="date" name="date" id="datePicker" required>
+                </div>
+                <div class="form-group">
+                    <label>Time (1hr slots)</label>
+                    <select name="time" id="timeSlot" required>
+                        </select>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-full">Confirm Booking</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Beauty By Design. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
